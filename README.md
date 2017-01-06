@@ -14,11 +14,11 @@ docker-it-scala utilises [docker-java](https://github.com/docker-java/docker-jav
 initialisation with default settings.
 
 ```scala
-import com.github.dockerjava.core.DockerClientConfig
+import com.github.dockerjava.core.DefaultDockerClientConfig
 
 trait DockerKit {
   implicit val docker: Docker =
-    new Docker(DockerClientConfig.createDefaultConfigBuilder().build())
+    new Docker(DefaultDockerClientConfig.createDefaultConfigBuilder().build())
 
   ...
 }
